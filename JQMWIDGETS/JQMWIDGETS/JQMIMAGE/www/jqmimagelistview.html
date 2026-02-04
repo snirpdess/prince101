@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>jQuery Mobile Listview with Popups</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- jQuery Mobile CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    
+    <!-- jQuery Mobile JS -->
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    
+</head>
+
+<body>
+    <div data-role="page" id="listview-page">
+        <!-- Header -->
+        <div data-role="header" data-position="fixed" data-theme="b">
+            <a href="index.html" class="ui-btn ui-corner-all ui-icon-back ui-btn-icon-left">Back</a>
+            <h1><i class="ui-icon-bars"></i> Profile Gallery</h1>
+        </div>
+
+        <!-- Main Content -->
+        <div role="main" class="ui-content">
+            <h1 class="page-title">Profile List</h1>
+            <p style="text-align: center; color: #7f8c8d; margin-bottom: 25px;">
+                Tap on any profile to view detailed information and photo
+            </p>
+            
+            <h2 class="section-title">Personal Profiles</h2>
+            
+            <!-- Listview 1: Juniel -->
+            <ul data-role="listview" data-inset="true" data-icon="false" data-theme="c">
+                <li>
+                    <a href="#popupjuniel" data-rel="popup" data-position-to="window" data-transition="fade">
+                        <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t39.30808-6/499703608_2601889116833354_4074275000242419612_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=86c6b0&_nc_eui2=AeFuG3P-kJ2lgzKF3MBKp9zFcjo8yf6B0YVyOjzJ_oHRhfb5BNp3VRLoEaUKZTnij4HDIj0HH9gMmdTt6iAr6-hb&_nc_ohc=JboStA_Isv4Q7kNvwH5eTJ7&_nc_oc=AdnntG06gTB_Mjtr2leR_3XZIeXiGl72fxjiIw3RCJyhfJtsIoGrnuYWFKUjyGKXTDU&_nc_zt=23&_nc_ht=scontent.fceb6-1.fna&_nc_gid=JGNhttsNiOpHoV8zUrhFiA&oh=00_Afqnjrwieybf7QGbJkKDWeoPv-_88s5gemiuwm6C8LL8VQ&oe=697FD20A" alt="Juniel Marfa" class="ui-li-thumb">
+                        <h2>Juniel Marfa</h2>
+                        <p><strong>IT Instructor</strong></p>
+                        <p>BS in Information Technology</p>
+                        <p class="ui-li-aside">Tap to view</p>
+                    </a>
+                </li>
+            </ul>
+            
+            <!-- Listview 2: Family -->
+            <ul data-role="listview" data-inset="true" data-icon="false" data-theme="c">
+                <li>
+                    <a href="#popupfampic" data-rel="popup" data-position-to="window" data-transition="fade">
+                        <img src="https://scontent.fceb2-1.fna.fbcdn.net/v/t1.6435-9/49205951_837138569975093_4165981113044434944_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=86c6b0&_nc_eui2=AeGmAcqhcnsGcNhASc5IwslSpeLr7QSfqNGl4uvtBJ-o0Q_JTYfjmzmF4vtepLG7JsK-lOOKWFtx9BkZvlv7W8Rn&_nc_ohc=tVpBplcflKoQ7kNvwEqfnZQ&_nc_oc=AdkZfAuRCIn4J__x7FMRki60bQDJA2KPClFseII3N1_718LAozcH62QdQ9TQZkU3pso&_nc_zt=23&_nc_ht=scontent.fceb2-1.fna&_nc_gid=gwkynD2Gn3tjKqth0cUGEg&oh=00_AfqXf9pF9hvN-tcREbnBIf6lGQxiaY9udhgHGyhEFPrtYg&oe=69A17B86" alt="Family Picture" class="ui-li-thumb">
+                        <h2>Family Picture</h2>
+                        <p><strong>Madridejos Cultural Center</strong></p>
+                        <p>Special family gathering event</p>
+                        <p class="ui-li-aside">Tap to view</p>
+                    </a>
+                </li>
+            </ul>
+            
+            <!-- Additional list items can be added here -->
+            <div style="margin-top: 30px; text-align: center; color: #95a5a6; font-size: 13px;">
+                <p><i class="ui-icon-info" style="display: inline-block; vertical-align: middle;"></i> 
+                Each list item opens a detailed view with full-size image</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <h4>© 2023 Marfa Collection | Mobile Application Development</h4>
+        </div>
+
+        <!-- Popup 1: Juniel -->
+        <div data-role="popup" id="popupjuniel" class="popup-container" 
+             data-overlay-theme="b" data-corners="false" data-tolerance="30,15">
+            <a href="#" data-rel="back" 
+               class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right ui-btn-close">
+               Close
+            </a>
+            <img class="popup-photo" src="https://scontent.fceb6-1.fna.fbcdn.net/v/t39.30808-6/499703608_2601889116833354_4074275000242419612_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=86c6b0&_nc_eui2=AeFuG3P-kJ2lgzKF3MBKp9zFcjo8yf6B0YVyOjzJ_oHRhfb5BNp3VRLoEaUKZTnij4HDIj0HH9gMmdTt6iAr6-hb&_nc_ohc=JboStA_Isv4Q7kNvwH5eTJ7&_nc_oc=AdnntG06gTB_Mjtr2leR_3XZIeXiGl72fxjiIw3RCJyhfJtsIoGrnuYWFKUjyGKXTDU&_nc_zt=23&_nc_ht=scontent.fceb6-1.fna&_nc_gid=JGNhttsNiOpHoV8zUrhFiA&oh=00_Afqnjrwieybf7QGbJkKDWeoPv-_88s5gemiuwm6C8LL8VQ&oe=697FD20A" alt="Juniel Marfa" class="ui-li-thumb" alt="Juniel Marfa">
+            <div class="popup-caption">
+                <h3>Juniel Marfa</h3>
+                <p>Information Technology St</p>
+                <p>Specializing in Web Development and Mobile Applications</p>
+            </div>
+        </div>
+
+        <!-- Popup 2: Family -->
+        <div data-role="popup" id="popupfampic" class="popup-container" 
+             data-overlay-theme="b" data-corners="false" data-tolerance="30,15">
+            <a href="#" data-rel="back" 
+               class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right ui-btn-close">
+               Close
+            </a>
+            <img class="popup-photo" src="https://scontent.fceb2-1.fna.fbcdn.net/v/t1.6435-9/49205951_837138569975093_4165981113044434944_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=86c6b0&_nc_eui2=AeGmAcqhcnsGcNhASc5IwslSpeLr7QSfqNGl4uvtBJ-o0Q_JTYfjmzmF4vtepLG7JsK-lOOKWFtx9BkZvlv7W8Rn&_nc_ohc=tVpBplcflKoQ7kNvwEqfnZQ&_nc_oc=AdkZfAuRCIn4J__x7FMRki60bQDJA2KPClFseII3N1_718LAozcH62QdQ9TQZkU3pso&_nc_zt=23&_nc_ht=scontent.fceb2-1.fna&_nc_gid=gwkynD2Gn3tjKqth0cUGEg&oh=00_AfqXf9pF9hvN-tcREbnBIf6lGQxiaY9udhgHGyhEFPrtYg&oe=69A17B86" alt="Family Picture">
+            <div class="popup-caption">
+                <h3>Family Gathering</h3>
+                <p>Madridejos Cultural Center</p>
+                <p>A memorable family celebration captured in 2023</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize jQuery Mobile
+        $(document).on("pagecreate", "#listview-page", function() {
+            // Set default transitions
+            $.mobile.defaultPageTransition = "slide";
+            
+            // Enhance listview items
+            $("[data-role='listview']").listview().listview("refresh");
+            
+            // Add click effect to list items
+            $(".ui-listview a").on("click", function() {
+                $(this).closest("li").addClass("ui-btn-active");
+            });
+            
+            // Handle popup close
+            $(document).on("popupafterclose", function() {
+                $(".ui-listview li").removeClass("ui-btn-active");
+            });
+            
+            // Keyboard support
+            $(document).on("keyup", function(e) {
+                if (e.keyCode === 27) { // ESC key closes popup
+                    if ($(".ui-popup-active").length) {
+                        $(".ui-popup-active").popup("close");
+                    }
+                }
+            });
+            
+            // Handle image loading errors
+            $("img").on("error", function() {
+                var $img = $(this);
+                var altText = $img.attr("alt") || "Image";
+                $img.replaceWith(
+                    '<div style="width: ' + $img.width() + 'px; height: ' + $img.height() + 'px; ' +
+                    'background: #ecf0f1; display: flex; align-items: center; justify-content: center; ' +
+                    'border-radius: 8px; border: 2px dashed #bdc3c7;">' +
+                    '<span style="color: #7f8c8d; font-size: 12px; text-align: center;">' +
+                    '<i class="ui-icon-alert" style="display: block; font-size: 24px; margin-bottom: 5px;"></i>' +
+                    altText + '<br><small>Image not found</small>' +
+                    '</span></div>'
+                );
+            });
+        });
+        
+        // Prevent zoom on double tap
+        document.addEventListener('touchstart', function(event) {
+            if (event.touches.length > 1) {
+                event.preventDefault();
+            }
+        }, false);
+    </script>
+</body>
+</html>

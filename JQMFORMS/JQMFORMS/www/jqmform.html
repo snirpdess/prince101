@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>jQM Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- jQuery Mobile 1.4.5 CDN -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+<div data-role="page">
+
+    <div data-role="header" data-position="fixed">
+        <a href="index.html" data-rel="back" class="ui-btn ui-corner-all ui-icon-back ui-btn-icon-left">Back</a>
+        <h1>jQM Form Controls</h1>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+
+        <h2>Form Elements</h2>
+
+        <form id="myForm">
+
+            <label for="textinput">Text input (with clear button):</label>
+            <input type="text" data-clear-btn="true" name="textinput" id="textinput" value="">
+
+            <label for="textarea-1">Textarea:</label>
+            <textarea name="textarea-1" id="textarea-1"></textarea>
+
+            <label for="number-2">Number (with clear button):</label>
+            <input type="number" data-clear-btn="true" name="number-2" id="number-2" value="">
+
+            <label for="date-2">Date (with clear button):</label>
+            <input type="date" data-clear-btn="true" name="date-2" id="date-2" value="">
+
+            <label for="password-2">Password (with clear button):</label>
+            <input type="password" data-clear-btn="true" name="password-2" id="password-2" value="">
+
+            <label for="flip-checkbox-1">Flip toggle switch:</label>
+            <input type="checkbox" data-role="flipswitch" name="flip-checkbox-1" id="flip-checkbox-1"
+                   data-on-text="On" data-off-text="Off">
+
+            <div class="ui-field-contain">
+                <label for="select-native-1">Select box/menu:</label>
+                <select name="select-native-1" id="select-native-1">
+                    <option value="1">The 1st Option</option>
+                    <option value="2">The 2nd Option</option>
+                    <option value="3">The 3rd Option</option>
+                    <option value="4">The 4th Option</option>
+                </select>
+            </div>
+
+            <fieldset data-role="controlgroup" data-type="horizontal">
+                <legend>Choose your gender:</legend>
+                <input type="radio" name="gender" id="male" value="male">
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="female" value="female">
+                <label for="female">Female</label>
+            </fieldset>
+
+            <fieldset data-role="controlgroup" data-type="horizontal">
+                <legend>Choose as many favorite colors as you'd like:</legend>
+                <input type="checkbox" name="favcolor[]" id="red" value="red">
+                <label for="red">Red</label>
+                <input type="checkbox" name="favcolor[]" id="green" value="green">
+                <label for="green">Green</label>
+                <input type="checkbox" name="favcolor[]" id="blue" value="blue">
+                <label for="blue">Blue</label>
+            </fieldset>
+
+            <button type="reset">Reset Button</button>
+            <button type="submit">Submit Button</button>
+
+        </form>
+
+    </div><!-- /content -->
+
+    <div data-role="footer" data-position="fixed">
+        <h1>Footer – [Marfa]</h1>
+    </div><!-- /footer -->
+
+</div><!-- /page -->
+
+<!-- Add this script at the end to make the form clickable/functional -->
+<script>
+$(document).ready(function() {
+    $("#myForm").submit(function(e) {
+        e.preventDefault(); // Prevent actual form submission
+
+        // Collect form values
+        let text = $("#textinput").val();
+        let textarea = $("#textarea-1").val();
+        let number = $("#number-2").val();
+        let date = $("#date-2").val();
+        let password = $("#password-2").val();
+        let flip = $("#flip-checkbox-1").is(":checked") ? "On" : "Off";
+        let select = $("#select-native-1").val();
+        let gender = $("input[name='gender']:checked").val() || "None";
+        let colors = [];
+        $("input[name='favcolor[]']:checked").each(function() {
+            colors.push($(this).val());
+        });
+
+        // Show alert with all collected values
+        alert(
+            "Text Input: " + text + "\n" +
+            "Textarea: " + textarea + "\n" +
+            "Number: " + number + "\n" +
+            "Date: " + date + "\n" +
+            "Password: " + password + "\n" +
+            "Flip: " + flip + "\n" +
+            "Select: " + select + "\n" +
+            "Gender: " + gender + "\n" +
+            "Favorite Colors: " + (colors.length ? colors.join(", ") : "None")
+        );
+    });
+});
+</script>
+
+</body>
+</html>

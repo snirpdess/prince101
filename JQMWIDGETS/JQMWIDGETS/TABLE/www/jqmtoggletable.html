@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Mobile Listview</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- jQuery Mobile CSS -->
+    <link rel="stylesheet" href="css/themes/default/jquery.mobile-1.4.5.min.css">
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- jQuery Mobile -->
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+<div data-role="page">
+
+    <!-- HEADER -->
+    <div data-role="header" data-position="fixed">
+        <a href="index.html"
+           class="ui-btn ui-corner-all ui-icon-back ui-btn-icon-left">
+            Back
+        </a>
+        <h1>jQM Table</h1>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div role="main" class="ui-content">
+        <h2>Table Column Toggle</h2>
+
+        <table data-role="table"
+               data-mode="columntoggle"
+               class="ui-responsive table-stroke"
+               border="1"
+               style="width:100%; border-collapse:collapse;">
+
+            <thead>
+                <tr>
+                    <th data-priority="1">No</th>
+                    <th data-priority="2">Name</th>
+                    <th data-priority="3">Occupation</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Piolo Pascual</td>
+                    <td>Programmer</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Juniel Marfa</td>
+                    <td>College Instructor</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Sam Milby</td>
+                    <td>Web Developer</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Aga Muhlach</td>
+                    <td>System Administrator</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>John Prats</td>
+                    <td>Android Developer</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- FOOTER -->
+    <div data-role="footer" data-position="fixed">
+        <h4>Mobile Application Development</h4>
+    </div>
+
+</div>
+</body>
+</html>

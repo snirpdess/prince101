@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Mobile Collapsible</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- jQuery Mobile CSS -->
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	
+	<!-- jQuery library -->
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	
+	<!-- jQuery Mobile library -->
+	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+	<div data-role="page">
+	
+		<div data-role="header" data-position="fixed">
+			<a href="index.html" class="ui-btn ui-corner-all ui-icon-back ui-btn-icon-left">Back</a>
+			<h1>jQM Collapsible</h1>
+		</div><!--/header-->
+
+		<div role="main" class="ui-content">
+			<p>Mini-sized Collapsible</p>
+			
+			<div data-role="collapsible" data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-mini="true">
+				<h4>Change Icon Heading - click me</h4>
+				<p>I'm the collapsible content. By default, I'm opened but you can click the header to close 
+				and open me again</p>
+			</div>
+			
+			<!-- Optional: Add more collapsibles or content here -->
+		</div><!--/content-->
+		
+		<div data-role="footer" data-position="fixed">
+			<h4>Mobile Application Development</h4>
+		</div><!--/footer-->
+		
+	</div><!--/page-->
+</body>
+</html>

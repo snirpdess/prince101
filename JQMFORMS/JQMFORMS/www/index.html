@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Load jQuery Mobile CSS FIRST -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    
+    <!-- Your custom CSS -->
+    <link rel="stylesheet" href="css/style.css">    
+    
+    <!-- Load jQuery core library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Load jQuery Mobile library -->
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    
+</head>
+<body>
+    <div data-role="page" id="index-page">
+        <div data-role="header" data-position="fixed">
+            <h1>jQuery Mobile Forms</h1>
+        </div><!--/header-->
+        
+        <div role="main" class="ui-content">
+            <h2>Welcome to jQuery Mobile Forms Demo</h2>
+            <p>Select an option below:</p>
+            
+            <!-- JQM Forms Button -->
+             <a href="jqmform.html"
+   data-ajax="false"
+   class="ui-btn ui-btn-b ui-corner-all ui-shadow jqm-forms-btn">
+    <span class="btn-text">📝 JQM Forms</span>
+</a>
+
+            
+            <!-- Exit Button - This triggers the popup -->
+            <a href="#popupClose" data-rel="popup" 
+               class="ui-btn ui-btn-a ui-corner-all ui-shadow exit-btn">
+                <span class="btn-text">❌ Exit Button</span>
+            </a>
+            
+            <!-- Popup Dialog - This will display when Exit Button is clicked -->
+            <div data-role="popup" id="popupCloseRight" 
+                 data-overlay-theme="b" 
+                 data-theme="a" 
+                 data-dismissible="false"
+                 class="ui-corner-all exit-popup">
+                <div class="popup-content">
+                    <h3>Confirm Exit</h3>
+                    <p id="ms" class="popup-message">
+                        Are you sure you want to close the app?
+                    </p>
+                    <div class="popup-buttons">
+                        <a href="#" onclick="closeApp(); return false;" 
+                           data-role="button" 
+                           data-theme="b"
+                           class="popup-btn-yes">
+                            Yes, Exit
+                        </a>
+                        <a href="#" data-rel="back" 
+                           data-role="button" 
+                           data-theme="a"
+                           class="popup-btn-no">
+                            No, Cancel
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div><!--/content-->
+        
+        
+    </div><!--/page-->
+    
+    <!-- Your JavaScript file -->
+    <script src="js/script.js"></script>
+</body>
+</html>

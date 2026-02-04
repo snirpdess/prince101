@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Mobile Collapsible</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- jQuery Mobile CSS -->
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	
+	<!-- jQuery Mobile -->
+	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+	<!-- Main Page -->
+	<div data-role="page" id="main-page">
+	
+		<div data-role="header" data-position="fixed">
+			<a href="index.html" class="ui-btn ui-corner-all ui-icon-back ui-btn-icon-left">Back</a>
+			<h1>jQM Collapsible Set</h1>
+		</div><!--/header-->
+		
+		<div role="main" class="ui-content">
+			<h2>Collapsible Set Example</h2>
+			
+			<!-- Collapsible Set -->
+			<div data-role="collapsibleset" data-inset="false">
+				
+				<!-- First Collapsible -->
+				<div data-role="collapsible">
+					<h3>Collapsible with Content</h3>
+					<p>I'm the collapsible content. By default I'm closed, but you can click the header to open and close me again.</p>
+					<p>This is a standard collapsible section with text content.</p>
+				</div><!--/collapsible-->
+				
+				<!-- Second Collapsible -->
+				<div data-role="collapsible">
+					<h3>Collapsible with Listview</h3>
+					<ul data-role="listview" data-inset="false">
+						<li><a href="#">Dinzky</a></li>
+						<li><a href="#">Kurt Bryan</a></li>
+						<li><a href="#">Julius</a></li>
+						<li><a href="#">Carissa</a></li>
+						<li><a href="#">Juniel</a></li>
+					</ul>
+				</div><!--/collapsible-->
+				
+				<!-- Third Collapsible -->
+				<div data-role="collapsible">
+					<h3>Combine Content Types</h3>
+					<p>I'm the collapsible content with mixed elements.</p>
+					<ul>
+						<li>Text content</li>
+						<li>Lists</li>
+						<li>Images</li>
+						<li>Buttons</li>
+					</ul>
+					<button class="ui-btn ui-btn-b">Sample Button</button>
+				</div><!--/collapsible-->
+				
+				<!-- Fourth Collapsible -->
+				<div data-role="collapsible">
+					<h3>Another Listview Example</h3>
+					<ul data-role="listview" data-inset="false">
+						<li><a href="#">Item 1</a></li>
+						<li><a href="#">Item 2</a></li>
+						<li><a href="#">Item 3</a></li>
+						<li><a href="#">Item 4</a></li>
+						<li><a href="#">Item 5</a></li>
+					</ul>
+				</div><!--/collapsible-->
+				
+				<!-- Fifth Collapsible -->
+				<div data-role="collapsible">
+					<h3>Nested Elements</h3>
+					<p>This collapsible contains various HTML elements:</p>
+					<div style="padding: 10px; background: #f5f5f5; margin: 10px 0; border-radius: 5px;">
+						<h4>Sub-heading</h4>
+						<p>Nested content with styling.</p>
+						<div data-role="controlgroup" data-type="horizontal">
+							<a href="#" class="ui-btn ui-mini">Button 1</a>
+							<a href="#" class="ui-btn ui-mini">Button 2</a>
+							<a href="#" class="ui-btn ui-mini">Button 3</a>
+						</div>
+					</div>
+				</div><!--/collapsible-->
+				
+				<!-- Sixth Collapsible -->
+				<div data-role="collapsible">
+					<h3>Form Elements</h3>
+					<div class="ui-field-contain">
+						<label for="name">Name:</label>
+						<input type="text" name="name" id="name" placeholder="Enter your name">
+					</div>
+					<div class="ui-field-contain">
+						<label for="email">Email:</label>
+						<input type="email" name="email" id="email" placeholder="Enter your email">
+					</div>
+					<div class="ui-field-contain">
+						<label for="slider">Rating:</label>
+						<input type="range" name="slider" id="slider" min="0" max="10" value="5">
+					</div>
+				</div><!--/collapsible-->
+				
+			</div><!--/collapsibleset-->
+			
+			<!-- Regular Collapsible (not part of the set) -->
+			<h3 style="margin-top: 30px;">Regular Collapsible (Not in Set)</h3>
+			<div data-role="collapsible" data-collapsed="true">
+				<h4>Independent Collapsible</h4>
+				<p>This collapsible is NOT part of the collapsible set above.</p>
+				<p>It can be opened independently while other collapsibles remain open.</p>
+			</div>
+			
+		</div><!--/content-->
+		
+		<div data-role="footer" data-position="fixed">
+			<h4>Mobile Application Development</h4>
+		</div><!--/footer-->
+		
+	</div><!--/page-->
+	
+	<script>
+		// Initialize jQuery Mobile components
+		$(document).on("pagecreate", "#main-page", function() {
+			console.log("Collapsible set page initialized");
+			
+			// Show initialization message
+			setTimeout(function() {
+				alert("Collapsible Set Demo Loaded!\n\nClick on any heading to expand/collapse.\n\nIn a collapsible set, only one section can be open at a time.");
+			}, 300);
+		});
+		
+		// Add click handlers for list items
+		$(document).on("click", "[data-role='listview'] a", function(e) {
+			e.preventDefault();
+			var itemText = $(this).text();
+			alert("You clicked on: " + itemText + "\n\n(In a real app, this would navigate to a new page or perform an action.)");
+		});
+		
+		// Handle button clicks
+		$(document).on("click", ".ui-btn", function(e) {
+			if(!$(this).attr("href")) {
+				e.preventDefault();
+				var btnText = $(this).text();
+				if(btnText.includes("Button")) {
+					alert("Button clicked: " + btnText);
+				}
+			}
+		});
+	</script>
+</body>
+</html>

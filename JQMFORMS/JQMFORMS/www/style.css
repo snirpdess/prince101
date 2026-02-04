@@ -1,0 +1,473 @@
+/* =============================================
+   CORE BUTTON DESIGN - Applied to all pages
+   ============================================= */
+
+/* Apply to all jQuery Mobile buttons */
+.ui-btn, 
+button.ui-btn,
+a.ui-btn {
+    cursor: pointer;
+    outline: 0;
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    border: 1px solid transparent;
+    padding: 12px 24px !important; /* Added !important to override jQuery Mobile */
+    font-size: 16px;
+    border-radius: .25rem !important; /* Added !important to override jQuery Mobile */
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, 
+                border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    margin: 8px 4px; /* Added spacing */
+}
+
+/* Hover state */
+.ui-btn:hover,
+button.ui-btn:hover,
+a.ui-btn:hover {
+    color: #fff !important;
+    background-color: #0b5ed7 !important;
+    border-color: #0a58ca !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Active/Selected state */
+.ui-btn:active,
+.ui-btn:focus,
+.ui-btn.ui-btn-active,
+.ui-btn.ui-state-active {
+    background-color: #0a58ca !important;
+    border-color: #0a53be !important;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+/* =============================================
+   INDEX PAGE SPECIFIC STYLES
+   ============================================= */
+
+/* Index page background and layout */
+#index-page {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Index page content area */
+#index-page .ui-content {
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+/* Index page header */
+#index-page [data-role="header"] {
+    background: rgba(0, 0, 0, 0.8);
+    border: none;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#index-page [data-role="header"] h1 {
+    color: white;
+    font-weight: 300;
+}
+
+/* Welcome text */
+#index-page h2 {
+    margin-top: 20px;
+    font-size: 2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#index-page p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* Custom button styling for index page */
+.jqm-forms-btn {
+    background-color: #28a745 !important;
+    border-color: #28a745 !important;
+    padding: 15px 30px !important;
+    font-size: 18px !important;
+    border-radius: .5rem !important;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.jqm-forms-btn:hover {
+    background-color: #218838 !important;
+    border-color: #1e7e34 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.exit-btn {
+    background-color: #dc3545 !important;
+    border-color: #dc3545 !important;
+    padding: 15px 30px !important;
+    font-size: 18px !important;
+    border-radius: .5rem !important;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.exit-btn:hover {
+    background-color: #c82333 !important;
+    border-color: #bd2130 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Button text */
+.btn-text {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+/* Popup styling */
+.exit-popup {
+    max-width: 90%;
+    border-radius: 1rem !important;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.popup-content {
+    padding: 20px;
+}
+
+.popup-content h3 {
+    color: #dc3545;
+    margin-top: 0;
+    font-size: 1.8em;
+}
+
+.popup-message {
+    font-size: 1.1em;
+    margin: 20px 0;
+    line-height: 1.5;
+}
+
+.popup-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.popup-btn-yes,
+.popup-btn-no {
+    flex: 1;
+    margin: 5px;
+}
+
+.popup-btn-yes {
+    background-color: #dc3545 !important;
+    border-color: #dc3545 !important;
+}
+
+.popup-btn-yes:hover {
+    background-color: #c82333 !important;
+    border-color: #bd2130 !important;
+}
+
+.popup-btn-no {
+    background-color: #6c757d !important;
+    border-color: #6c757d !important;
+}
+
+.popup-btn-no:hover {
+    background-color: #5a6268 !important;
+    border-color: #545b62 !important;
+}
+
+/* =============================================
+   FORM PAGE SPECIFIC STYLES
+   ============================================= */
+
+/* Form page background */
+#form-page {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+/* Form page header */
+#form-page [data-role="header"] {
+    background: rgba(13, 110, 253, 0.9);
+    border: none;
+}
+
+#form-page [data-role="header"] h1 {
+    color: white;
+    font-weight: 300;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Form content area */
+#form-page .ui-content {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Form heading */
+#form-page h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+    font-weight: 300;
+}
+
+/* Form container styling */
+#jqm-form {
+    background: white;
+    padding: 25px;
+    border-radius: 1rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+}
+
+/* Form field containers */
+.ui-field-contain {
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+    margin: 0;
+}
+
+.ui-field-contain:last-child {
+    border-bottom: none;
+}
+
+/* Labels */
+.ui-field-contain label {
+    font-weight: 600;
+    color: #495057;
+    margin-bottom: 8px;
+    display: block;
+    font-size: 1em;
+}
+
+/* Input fields styling */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="password"],
+textarea,
+select {
+    width: 100% !important;
+    padding: 12px !important;
+    border: 1px solid #ced4da !important;
+    border-radius: .375rem !important;
+    font-size: 16px !important;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    background-color: white !important;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #86b7fe !important;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25) !important;
+    outline: 0 !important;
+}
+
+/* Textarea specific */
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Flipswitch customization */
+.ui-flipswitch {
+    width: 80px !important;
+    border-radius: .375rem !important;
+}
+
+/* Radio buttons and checkboxes customization */
+.ui-controlgroup-controls label.ui-btn {
+    border-radius: .375rem !important;
+    margin: 4px !important;
+}
+
+/* Grid layout for buttons */
+.ui-grid-a,
+.ui-grid-solo {
+    margin-top: 25px;
+}
+
+/* Demo button special styling */
+#demo-btn {
+    background-color: #6f42c1 !important;
+    border-color: #6f42c1 !important;
+    width: 100%;
+}
+
+#demo-btn:hover {
+    background-color: #5a32a3 !important;
+    border-color: #512da8 !important;
+}
+
+/* Submit button styling */
+button[type="submit"] {
+    background-color: #198754 !important;
+    border-color: #198754 !important;
+    width: 100%;
+    padding: 15px !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+}
+
+button[type="submit"]:hover {
+    background-color: #157347 !important;
+    border-color: #146c43 !important;
+}
+
+/* Reset button styling */
+button[type="reset"] {
+    background-color: #6c757d !important;
+    border-color: #6c757d !important;
+    width: 100%;
+}
+
+button[type="reset"]:hover {
+    background-color: #5a6268 !important;
+    border-color: #545b62 !important;
+}
+
+/* Form exit area styling */
+#form-page .ui-content > div[style*="text-align: center"] {
+    background: white;
+    padding: 25px;
+    border-radius: 1rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    margin-top: 20px;
+}
+
+.exit-btn-danger {
+    background-color: #dc3545 !important;
+    border-color: #dc3545 !important;
+    padding: 10px 20px !important;
+    font-size: 14px !important;
+}
+
+.exit-btn-danger:hover {
+    background-color: #c82333 !important;
+    border-color: #bd2130 !important;
+}
+
+/* Toast notifications */
+.ui-toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: white;
+    padding: 12px 24px;
+    border-radius: .375rem;
+    z-index: 10000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateX(-50%) translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(-50%) translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Form validation styling */
+.valid-field {
+    border-color: #198754 !important;
+}
+
+.error-field {
+    border-color: #dc3545 !important;
+}
+
+/* Results area (if you add it to your form) */
+#form-results {
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: .375rem;
+    padding: 20px;
+    margin-top: 20px;
+    font-family: monospace;
+    white-space: pre-wrap;
+    display: none;
+}
+
+/* =============================================
+   RESPONSIVE DESIGN
+   ============================================= */
+
+@media (max-width: 767px) {
+    /* Adjust padding for mobile */
+    .ui-btn, 
+    button.ui-btn,
+    a.ui-btn {
+        padding: 10px 20px !important;
+        font-size: 15px !important;
+    }
+    
+    /* Index page adjustments */
+    #index-page h2 {
+        font-size: 1.5em;
+    }
+    
+    .jqm-forms-btn,
+    .exit-btn {
+        padding: 12px 24px !important;
+        font-size: 16px !important;
+    }
+    
+    /* Form page adjustments */
+    #form-page .ui-content {
+        padding: 10px;
+    }
+    
+    #jqm-form {
+        padding: 15px;
+    }
+    
+    .popup-buttons {
+        flex-direction: column;
+    }
+    
+    .popup-btn-yes,
+    .popup-btn-no {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+@media (min-width: 768px) {
+    /* Desktop specific adjustments */
+    #form-page .ui-content {
+        padding: 30px;
+    }
+    
+    .ui-field-contain {
+        display: flex;
+        align-items: center;
+    }
+    
+    .ui-field-contain label {
+        width: 200px;
+        margin: 0 15px 0 0;
+    }
+    
+    .ui-field-contain input,
+    .ui-field-contain textarea,
+    .ui-field-contain select {
+        flex: 1;
+    }       
+}

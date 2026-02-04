@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Mobile Panels</title>
+    
+    <!-- jQuery Mobile CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    
+    <!-- Load jQuery core library -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- Load jQuery Mobile library -->
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+    <!-- Main Page -->
+    <div data-role="page" id="main-page">
+        
+        <!-- Header -->
+        <div data-role="header" data-position="fixed">
+            
+            <h1>Panel Components</h1>
+        </div>
+        
+        <!-- Main Content -->
+        <div role="main" class="ui-content">
+            <h2>jQuery Mobile Panel Demonstration</h2>
+            
+            <p>This demo showcases three different panel display modes in jQuery Mobile. Each panel opens from the right side with a distinct animation style.</p>
+            
+            <div data-role="collapsible" data-collapsed="false">
+                <h3>Panel Display Modes</h3>
+                <p>Each mode provides a different user experience when displaying overlay content.</p>
+            </div>
+            
+            <a href="#push-panel" class="ui-btn ui-btn-b" data-role="button">
+                Push Panel
+                <span class="ui-li-aside">Panel pushes the page content aside</span>
+            </a>
+            
+            <a href="#reveal-panel" class="ui-btn ui-btn-b" data-role="button">
+                Reveal Panel
+                <span class="ui-li-aside">Panel slides over the page content</span>
+            </a>
+            
+            <a href="#overlay-panel" class="ui-btn ui-btn-b" data-role="button">
+                Overlay Panel
+                <span class="ui-li-aside">Panel overlays on top of page content</span>
+            </a>
+            
+            <div data-role="collapsible">
+                <h3>Usage Guidelines</h3>
+                <p>Panels are ideal for navigation menus, settings, or supplementary content. Choose the display mode based on your application's user experience requirements.</p>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div data-role="footer" data-position="fixed">
+            <h4>Mobile Application Development</h4>
+        </div>
+    </div>
+    
+    <!-- Push Panel -->
+    <div data-role="panel" id="push-panel" data-position="right" data-display="push" data-theme="b">
+        <h3>Push Panel</h3>
+        <p>This panel uses the <strong>push</strong> display mode. When opened, it pushes the main page content to the left.</p>
+        <p>This creates a clear spatial relationship between the panel and main content.</p>
+        <a href="#" class="ui-btn ui-btn-a" data-rel="close">Close Panel</a>
+    </div>
+    
+    <!-- Reveal Panel -->
+    <div data-role="panel" id="reveal-panel" data-position="right" data-display="reveal" data-theme="b">
+        <h3>Reveal Panel</h3>
+        <p>This panel uses the <strong>reveal</strong> display mode. The panel slides over the page content.</p>
+        <p>This mode is useful when you want to maintain the context of the main page.</p>
+        <a href="#" class="ui-btn ui-btn-a" data-rel="close">Close Panel</a>
+    </div>
+    
+    <!-- Overlay Panel -->
+    <div data-role="panel" id="overlay-panel" data-position="right" data-display="overlay" data-theme="b">
+        <h3>Overlay Panel</h3>
+        <p>This panel uses the <strong>overlay</strong> display mode. It appears on top of the page content.</p>
+        <p>This is ideal for temporary actions or information.</p>
+        <a href="#" class="ui-btn ui-btn-a" data-rel="close">Close Panel</a>
+    </div>
+</body>
+</html>

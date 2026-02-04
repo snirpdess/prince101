@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Mobile Listview</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+	
+	<div data-role="page" id="page1">
+		
+		<!-- All panels on the left -->
+		<div data-role="panel" id="pushpanel" data-position="left" data-display="push">
+			<p>Left Aligned and push mode of display</p>
+			<a href="#" class="ui-btn" data-rel="close">Close</a>
+		</div>
+		
+		<div data-role="panel" id="revealpanel" data-position="left" data-display="reveal">
+			<p>Left Aligned and reveal mode of display</p>
+			<a href="#" class="ui-btn" data-rel="close">Close</a>
+		</div>
+		
+		<div data-role="panel" id="overlaypanel" data-position="left" data-display="overlay">
+			<p>Left Aligned and overlay mode of display</p>
+			<a href="#" class="ui-btn" data-rel="close">Close</a>
+		</div>
+		
+		<div data-role="header">
+			<h1>Panel</h1>
+		</div>
+		
+		<div role="main" class="ui-content">
+			<h2>Left Aligned Panel</h2>
+			<p>Your content Here</p>
+			<a href="#pushpanel" class="ui-btn">Push Panel</a>
+			<a href="#revealpanel" class="ui-btn">Reveal Panel</a>
+			<a href="#overlaypanel" class="ui-btn">Overly Panel</a>
+		</div>
+		
+		<div data-role="footer" data-position="fixed">
+			<h4>Mobile Application Development</h4>
+		</div>
+	</div>
+</body>
+</html>

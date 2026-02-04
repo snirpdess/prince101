@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>jQuery Mobile Image Popup Gallery</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- jQuery Mobile CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    
+    <!-- jQuery Mobile JS -->
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    
+
+</head>
+
+<body>
+    <div data-role="page" id="gallery-page">
+        <!-- Header -->
+        <div data-role="header" data-position="fixed" data-theme="b">
+            <a href="index.html" class="ui-btn ui-corner-all ui-icon-back ui-btn-icon-left ui-btn-back">Back</a>
+            <h1><i class="ui-icon-camera"></i> Image Gallery</h1>
+        </div>
+
+        <!-- Main Content -->
+        <div role="main" class="ui-content">
+            <h2 class="gallery-title">Popup Image Gallery</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 30px;">
+                Click on any thumbnail to view the full-size image
+            </p>
+            
+            <!-- Image 1: Juniel -->
+            <div class="thumbnail-container">
+                <a href="#popupjuniel" data-rel="popup" data-position-to="window" data-transition="fade" class="thumbnail">
+                    <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t39.30808-6/499703608_2601889116833354_4074275000242419612_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=86c6b0&_nc_eui2=AeFuG3P-kJ2lgzKF3MBKp9zFcjo8yf6B0YVyOjzJ_oHRhfb5BNp3VRLoEaUKZTnij4HDIj0HH9gMmdTt6iAr6-hb&_nc_ohc=JboStA_Isv4Q7kNvwH5eTJ7&_nc_oc=AdnntG06gTB_Mjtr2leR_3XZIeXiGl72fxjiIw3RCJyhfJtsIoGrnuYWFKUjyGKXTDU&_nc_zt=23&_nc_ht=scontent.fceb6-1.fna&_nc_gid=JGNhttsNiOpHoV8zUrhFiA&oh=00_Afqnjrwieybf7QGbJkKDWeoPv-_88s5gemiuwm6C8LL8VQ&oe=697FD20A" alt="Juniel">
+                    <div style="padding: 5px; background: #f5f5f5; font-size: 12px; color: #333;">Juniel</div>
+                </a>
+            </div>
+            
+            <!-- Image 2: Anime -->
+            <div class="thumbnail-container">
+                <a href="#popupanime" data-rel="popup" data-position-to="window" data-transition="fade" class="thumbnail">
+                    <img src="data:image/jpeg;base64,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" alt="Zero Two">
+                    <div style="padding: 5px; background: #f5f5f5; font-size: 12px; color: #333;">Zero Two</div>
+                </a>
+            </div>
+            
+            <!-- Image 3: Family Picture -->
+            <div class="thumbnail-container">
+                <a href="#popupfampic" data-rel="popup" data-position-to="window" data-transition="fade" class="thumbnail">
+                    <img src="https://scontent.fceb2-1.fna.fbcdn.net/v/t1.6435-9/49205951_837138569975093_4165981113044434944_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=86c6b0&_nc_eui2=AeGmAcqhcnsGcNhASc5IwslSpeLr7QSfqNGl4uvtBJ-o0Q_JTYfjmzmF4vtepLG7JsK-lOOKWFtx9BkZvlv7W8Rn&_nc_ohc=tVpBplcflKoQ7kNvwEqfnZQ&_nc_oc=AdkZfAuRCIn4J__x7FMRki60bQDJA2KPClFseII3N1_718LAozcH62QdQ9TQZkU3pso&_nc_zt=23&_nc_ht=scontent.fceb2-1.fna&_nc_gid=gwkynD2Gn3tjKqth0cUGEg&oh=00_AfqXf9pF9hvN-tcREbnBIf6lGQxiaY9udhgHGyhEFPrtYg&oe=69A17B86" alt="Family Picture">
+                    <div style="padding: 5px; background: #f5f5f5; font-size: 12px; color: #333;">Family</div>
+                </a>
+            </div>
+            
+            <!-- Image 4: High School -->
+            <div class="thumbnail-container">
+                <a href="#popuphigh1" data-rel="popup" data-position-to="window" data-transition="fade" class="thumbnail">
+                    <img src="https://scontent.fceb2-2.fna.fbcdn.net/v/t39.30808-6/494544103_2582725245416408_1917539248698649253_n.jpg?stp=dst-jpg_s552x414_tt6&_nc_cat=110&ccb=1-7&_nc_sid=86c6b0&_nc_eui2=AeE6G20i5gDA2dnHe91xxupwlyB38ei7P0GXIHfx6Ls_QSKkwCjj1P-pgzuzi_bOe18ubyxZOHYdkq3bxeMtzrsf&_nc_ohc=MPLBDBMy9WgQ7kNvwHugIgC&_nc_oc=AdnwDEQREagKtq-So5ac74YTxyhDMW_GggDFNPYsK462cXdt5AXH4pfxuwpHLOsOUsg&_nc_zt=23&_nc_ht=scontent.fceb2-2.fna&_nc_gid=6almwqUbwJWEHyFREr4cxw&oh=00_Afq-dNS3pDz8ZtTsMb9GLZfnSjeEXgMHmFh-oJpWOl9yxA&oe=697FB149" alt="High School">
+                    <div style="padding: 5px; background: #f5f5f5; font-size: 12px; color: #333;">High School</div>
+                </a>
+            </div>
+            
+            <div style="clear: both; margin-top: 30px;">
+                <p style="color: #777; font-size: 13px; text-align: center;">
+                    <i>Tap any image to view it in full size. Press ESC or tap outside to close.</i>
+                </p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <h4>Mobile Application Development &copy; 2023</h4>
+        </div>
+
+        <!-- Popup 1: Juniel -->
+        <div data-role="popup" id="popupjuniel" class="popup-container" data-overlay-theme="b" data-corners="false" data-tolerance="30,15">
+            <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right ui-btn-close">Close</a>
+            <img class="popup-image" src="images/juniel.jpg" alt="Juniel - Korean Singer">
+            <div class="image-caption">Juniel - Korean Singer and Songwriter</div>
+        </div>
+
+        <!-- Popup 2: Anime -->
+        <div data-role="popup" id="popupanime" class="popup-container" data-overlay-theme="b" data-corners="false" data-tolerance="30,15">
+            <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right ui-btn-close">Close</a>
+            <img class="popup-image" src="images/anime.jpeg" alt="Zero Two - Anime Character">
+            <div class="image-caption">Zero Two - Character from Darling in the Franxx</div>
+        </div>
+
+        <!-- Popup 3: Family Picture -->
+        <div data-role="popup" id="popupfampic" class="popup-container" data-overlay-theme="b" data-corners="false" data-tolerance="30,15">
+            <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right ui-btn-close">Close</a>
+            <img class="popup-image" src="images/fampic.jpg" alt="Family Picture">
+            <div class="image-caption">Family Portrait - Cherished Memories</div>
+        </div>
+
+        <!-- Popup 4: High School -->
+        <div data-role="popup" id="popuphigh1" class="popup-container" data-overlay-theme="b" data-corners="false" data-tolerance="30,15">
+            <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right ui-btn-close">Close</a>
+            <img class="popup-image" src="images/high1.jpg" alt="High School Memories">
+            <div class="image-caption">High School Days - Academic Memories</div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize jQuery Mobile
+        $(document).on("pagecreate", "#gallery-page", function() {
+            // Set default page transition
+            $.mobile.defaultPageTransition = "fade";
+            
+            // Enhance popup functionality
+            $(".thumbnail").on("click", function() {
+                // Add active class for visual feedback
+                $(this).parent().addClass("active");
+                
+                // Remove active class after popup closes
+                $(document).on("popupafterclose", function() {
+                    $(".thumbnail-container").removeClass("active");
+                });
+            });
+            
+            // Keyboard navigation support
+            $(document).on("keyup", function(e) {
+                if (e.keyCode === 27) { // ESC key
+                    $(".ui-popup-active").popup("close");
+                }
+            });
+        });
+        
+        // Handle image loading errors
+        $(document).on("pageinit", function() {
+            $(".popup-image").on("error", function() {
+                var altText = $(this).attr("alt") || "Image";
+                $(this).replaceWith(
+                    '<div style="padding: 40px; color: white; text-align: center;">' +
+                    '<p><i class="ui-icon-alert" style="font-size: 48px;"></i></p>' +
+                    '<p>Failed to load: ' + altText + '</p>' +
+                    '<p style="font-size: 12px;">Check the image path: ' + $(this).attr("src") + '</p>' +
+                    '</div>'
+                );
+            });
+        });
+    </script>
+</body>
+</html>

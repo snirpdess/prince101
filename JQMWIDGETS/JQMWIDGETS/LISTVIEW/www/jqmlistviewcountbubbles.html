@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Mobile Listview</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+	<div data-role="page">
+		<div data-role="header" data-position="fixed">
+			<a href="index.html" class="ui-btn ui-corner-all ui-icon-back ui-btn-icon-left">Back</a>
+			<h1>jQM Listview</h1>
+		</div>
+		
+		<div role="main" class="ui-content">
+			<ul data-role="listview" data-count-theme="b" data-inset="true">
+				<li><a href="#">Inbox<span class="ui-li-count">12</span></a></li>
+				<li><a href="#">Outbox<span class="ui-li-count">0</span></a></li>
+				<li><a href="#">Drafts<span class="ui-li-count">4</span></a></li>
+				<li><a href="#">Sent<span class="ui-li-count">328</span></a></li>
+				<li><a href="#">Trash<span class="ui-li-count">62</span></a></li>
+			</ul>
+			
+			<!-- Marfa text on the left under the list -->
+			<div style="text-align: left; margin-top: 20px;">
+				<h4>Marfa</h4>
+			</div>
+		</div>
+		
+		<div data-role="footer" data-position="fixed">
+			<h4>Free Elective 2</h4>
+		</div>
+	</div>
+</body>
+</html>

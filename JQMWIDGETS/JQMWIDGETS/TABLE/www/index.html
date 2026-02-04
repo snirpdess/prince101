@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index Page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+	<div data-role="page">
+		<div data-role="header">
+			<h1>jQuery Mobile Popup</h1>
+		</div>
+		
+		<div role="main" class="ui-content">
+			<p>jQuery Mobile Popup</p>
+			<a href="jqmtablereflow.html" class="ui-btn">Table Reflow</a>
+			<a href="jqmtoggletable.html" class="ui-btn">Table Toggle Column</a>
+			<a href="index.html" data-rel="popup" data-position="window" class="ui-btn ui-btn-b" data-transition="pop">Exit Button</a>
+			
+			<div data-role="popup" id="popupCloseRight" class="ui-content">
+				<p>Are you sure you want to close the app?</p>
+				<a href="#" data-rel="back" data-role="button" data-theme="b">Yes</a>
+				<a href="#" data-rel="back" data-role="button" data-theme="b">No</a>
+			</div>
+		</div>
+		
+		<div data-role="footer" data-position="fixed">
+			<h4>Mobile Application Development</h4>
+		</div>
+	</div>
+</body>
+</html>

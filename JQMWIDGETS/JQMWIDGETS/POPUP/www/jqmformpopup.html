@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index Page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+	<div data-role="page">
+		<div data-role="header" data-position="fixed">
+			<a href="index.html" class="ui-btn ui-corner-all ui-icon-back ui-btn-icon-left">Back</a>
+			<h1>jQuery Popup Form</h1>
+		</div>
+		
+		<div role="main" class="ui-content">
+			<h2>Popup with Close button</h2>
+			<a href="#popupLogin" data-rel="popup" data-position="window" class="ui-btn ui-corner-all ui-shadow ui-icon-check ui-btn-icon-left ui-btn-a" data-transition="pop">Sign in</a>
+			
+			<div data-role="popup" id="popupLogin" data-theme="a" class="ui-corner-all">
+				<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+				<form>
+					<div style="padding:10px 20px;">
+						<h3>Please sign in</h3>
+						<label for="un" class="ui-hidden-accessible">Username:</label>
+						<input type="text" name="user" id="un" value="" placeholder="username" data-theme="a">
+						<label for="pw" class="ui-hidden-accessible">Password:</label>
+						<input type="text" name="user" id="pw" value="" placeholder="password" data-theme="a">
+						<button type="submit" class="ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left ui-icon-check">Sign in</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		
+		<div data-role="footer" data-position="fixed">
+			<h4>Mobile Application Development</h4>
+		</div>
+	</div>
+</body>
+</html>
